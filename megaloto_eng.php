@@ -1,12 +1,11 @@
-<? 
+﻿<? 
 session_start();
 
-require('config.php');
 require("includes/php/db_functions.php");
 $check_tickets_left = dbQuery("SELECT id FROM tb_megaloto WHERE status='ok'");
 $tickets_left = mysql_num_rows($check_tickets_left);
 if($tickets_left<1){
-	include('lotodone.php');
+	include('lotodone_eng.php');
 }
 ?>
 <html>
